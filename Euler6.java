@@ -1,15 +1,12 @@
 
-public class Euler6 {
-
-	public static void main(String[] args) {
-		int sum1=0,sum2=0;
-		for(int i=1;i<=100;i++) {
-			sum1=sum1+i;
-			sum2=sum2+(i*i);
-		}sum1=sum1*sum1;
-		int result=sum1-sum2;
-		System.out.println("the differnece between number is "+result);
-	}
-
+class euler6
+{
+public static void main(String[] args) {
+	int sumsq,sqsum,diff,n=100;
+	sumsq=(n*(n+1))/2;
+	sqsum=(n*(n+1)*((2*n)+1))/6;
+	diff=(sumsq*sumsq)-sqsum;
+	System.out.println(diff);	
+}
 }
         //25164150

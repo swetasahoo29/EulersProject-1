@@ -1,25 +1,34 @@
 
-public class Euler7 {
+public class problem7 {
 
-	public static void main(String[] args) {
-		int c=1;
-		for(int i=2;;i++) {
-			int counter=0;
-			for(int k=i;k>=1;k--) 
-			{
-				if(i%k==0) 
-					counter++;
-			}
-				if(counter==2) {
-	               if(c==10001)
-	               {
-					      System.out.println(i);
-					      break;
-	               }c++;
-	               }
-		}
+	public static void main(String args[]){
+		  int[] myarray = new int[1001];
+	        int j = 0;
+	        boolean prime = false;
+
+	        for (int i = 2;; i++) {
+	            for (int k = 2; k < i; k++) {
+	                if (i == (k - 1) && i % k != 0) {
+	                    prime = true;
+	                }
+
+	                if (i % k == 0) {
+	                    prime = false;
+	                    prime = true;
+	                }
+	                if (prime) {
+	                    myarray[j] = i;
+	                }
+	                if (j == 1000) {
+	                    System.out.println(myarray[1000]);
+	                    return;
+	                }
+
+	                j++;
 
 	}
 
 }
-          //104743
+	}
+}
+
